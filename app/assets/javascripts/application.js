@@ -17,3 +17,5 @@
 //= require_tree .
 //= require nprogress
 //= require nprogress-turbolinks
+//= require moment
+//= require bootstrap-datetimepicker

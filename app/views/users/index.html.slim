@@ -1,0 +1,30 @@
+h1 Listing users
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+      th
+
+  tbody
+    - @users.each do |user|
+      tr
+        td = user.name
+        td = link_to 'Show', user
+        td = link_to 'Edit', edit_user_path(user)
+        td = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New User', new_user_path
+
+.container
+  .row
+    .col-sm-6
+      .form-group
+        .input-group.date#datetimepicker1
+          input.form-control[type="text"]
+          span.input-group-addon
+            span.glyphicon.glyphicon-calendar
